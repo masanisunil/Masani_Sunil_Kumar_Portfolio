@@ -1,5 +1,4 @@
-import React from 'react';
-import { technicalSkills } from '../data/portfolioData';
+import { technicalSkills } from '../data/sunilPortfolioData';
 
 const SkillProgress = ({ name, level }) => (
   <div className="mb-4">
@@ -51,7 +50,7 @@ const TechnicalSkills = () => {
             My Skillset
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-xl mx-auto leading-relaxed">
-            A comprehensive overview of my programming languages, frameworks, databases, and engineering concepts.
+            A focused overview of my programming languages, frameworks, databases, cloud tools, and engineering concepts.
           </p>
         </div>
 

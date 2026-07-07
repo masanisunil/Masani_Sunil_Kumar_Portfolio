@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { personalInfo } from '../data/portfolioData';
+import { personalInfo } from '../data/sunilPortfolioData';
 
 const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);

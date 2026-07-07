@@ -1,46 +1,71 @@
-import React from 'react';
-import stackImage from '../assets/about/lohitha-avatar.png';
-import { aboutContent } from '../data/portfolioData';
+import stackImage from '../assets/sunil/sunil-hero-image.jpeg';
+import { aboutContent } from '../data/sunilPortfolioData';
 
-// Tech stack SVG icons rendered inline for crisp rendering
-const JavaIcon = () => (
-  <div className="flex flex-col items-center gap-2">
-    <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128">
-      <path fill="#EA2D2E" d="M47.617 98.12c-19.192 5.362 11.677 16.439 36.115 5.969-4.003-1.556-6.874-3.391-6.874-3.391-10.897 5.163-31.934 2.759-25.932-2.097 4.501-3.631 0 0-3.309-.481zM65.856 86.36c-11.756 6.392-26.996 7.086-18.907 1.186 0 0-7.915 5.163-16.747 9.202 0 0-2.31 2.259 8.003 2.981 17.168 1.199 43.879-.749 45.026-8.065 0 0 1.243-3.178-17.375-5.304z"/>
-      <path fill="#EA2D2E" d="M83.528 71.122s5.58 5.784-6.154 10.372c-22.342 8.725-46.496.666-29.911-6.023 6.238-2.515 9.738-2.728 9.738-2.728s-3.397-2.4-11.715 2.103c-24.692 13.36 11.12 19.441 39.654 8.366 5.363-2.077 8.162-5.965 8.162-5.965-.001.001-9.774-6.125-9.774-6.125zM91.625 96.106c-.198.395-.461.781-.791 1.159 0 0 13.189-3.404 8.545-11.964-4.591-8.454-8.145-12.625 10.927-27.179 0 0-29.855 7.447-18.681 37.984z"/>
-      <path fill="#EA2D2E" d="M76.203 0s11.752 11.752-11.146 29.835c-18.359 14.499-4.187 22.754-.005 32.198-10.7-9.662-18.555-18.159-13.29-26.074C59.003 24.494 80.823 18.793 76.203 0zM66.414 113.085c21.023 1.345 53.358-.745 54.156-10.672 0 0-1.473 3.777-17.441 6.776-18.02 3.384-40.215 2.988-53.367.819 0 .001 2.695 2.228 16.652 3.077z"/>
-    </svg>
-    <span className="text-xs font-bold text-white/70 uppercase tracking-wider">Java</span>
+// Tech stack SVG icons rendered inline for crisp, dependency-free rendering.
+const TechLogoCard = ({ label, delay, children }) => (
+  <div
+    data-aos="zoom-in"
+    data-aos-delay={delay}
+    className="group flex flex-col items-center gap-3"
+  >
+    <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl bg-white shadow-[0_18px_40px_rgba(0,0,0,0.22)] border border-black/10 flex items-center justify-center transition-all duration-300 group-hover:-translate-y-2 group-hover:rotate-1 group-hover:shadow-[0_24px_50px_rgba(0,0,0,0.3)]">
+      {children}
+    </div>
+    <span className="text-xs md:text-sm font-black text-white uppercase tracking-wider drop-shadow-sm">
+      {label}
+    </span>
   </div>
 );
 
-const SpringBootIcon = () => (
-  <div className="flex flex-col items-center gap-2">
-    <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128">
-      <path fill="#6DB33F" d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A64.249 64.249 0 0064.205-.026C28.984-.026 0 28.958 0 64.179c0 35.22 28.984 64.205 64.205 64.205 35.221 0 64.179-28.985 64.179-64.205 0-10.632-2.624-20.672-7.26-29.508a59.03 59.03 0 01-4.672-8.028zm-53.478 99.75c-23.407 0-42.392-18.985-42.392-42.393 0-23.407 18.985-42.392 42.392-42.392 4.016 0 7.907.563 11.591 1.607l-4.756 8.229a34.498 34.498 0 00-6.835-.683c-19.152 0-34.673 15.521-34.673 34.673 0 19.153 15.521 34.674 34.673 34.674 12.322 0 23.146-6.443 29.29-16.146l7.621 4.397c-7.966 12.614-22.043 20.984-37.911 20.034z"/>
-      <path fill="#6DB33F" d="M96.118 56.392l-32.22 18.604-8.816-15.273 32.221-18.604z"/>
-    </svg>
-    <span className="text-xs font-bold text-white/70 uppercase tracking-wider">Spring Boot</span>
-  </div>
+const PythonLogo = () => (
+  <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128" aria-hidden="true">
+    <path fill="#3776AB" d="M63.8 10c-25.2 0-23.7 10.9-23.7 10.9v11.3h24.1v3.4H30.7S14 33.7 14 60.1s14.6 25.4 14.6 25.4h8.7V73.2s-.5-14.6 14.3-14.6h23.9s13.5.2 13.5-13V23.9S91.1 10 63.8 10zM50.5 18.1a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8z" />
+    <path fill="#FFD43B" d="M64.2 118c25.2 0 23.7-10.9 23.7-10.9V95.8H63.8v-3.4h33.5S114 94.3 114 67.9s-14.6-25.4-14.6-25.4h-8.7v12.3s.5 14.6-14.3 14.6H52.5s-13.5-.2-13.5 13v21.7S36.9 118 64.2 118zm13.3-8.1a4.4 4.4 0 1 1 0-8.8 4.4 4.4 0 0 1 0 8.8z" />
+  </svg>
 );
 
-const MernIcon = () => (
-  <div className="flex flex-col items-center gap-2">
-    <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128">
-      {/* Central React Atom */}
-      <g stroke="#00d8ff" strokeWidth="4.5" fill="none" transform="translate(10, 10)">
-        <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(30 54 54)" />
-        <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(90 54 54)" />
-        <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(150 54 54)" />
-        <circle cx="54" cy="54" r="7" fill="#00d8ff" />
-      </g>
-      {/* MongoDB Leaf overlap overlay in bottom left */}
-      <path fill="#439934" d="M36 84c-3-6-4-15 0-22 3 7 9 10 10 15 2 1.5 1 3-2 5l-8 2zm4-25c2 4 4 11 0 16-1-5-6-8-7-12-2-1-1-3 2-4l5 0z" opacity="0.9" />
-      {/* Node.js Hexagon in top right */}
-      <path fill="#339933" d="M98 32l-12-7-12 7v14l12 7 12-7V32zm-12 1.5l8 4.6v9.3l-8 4.6-8-4.6v-9.3l8-4.6z" opacity="0.9" />
-    </svg>
-    <span className="text-xs font-bold text-white/70 uppercase tracking-wider">MERN Stack</span>
-  </div>
+const NodeLogo = () => (
+  <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128" aria-hidden="true">
+    <path fill="#339933" d="M64 8 16 35.7v55.4L64 119l48-27.9V35.7L64 8z" />
+    <path fill="#fff" d="M42 84.8c0 4.8 2.5 7.6 6.7 7.6 4.1 0 6.4-2.5 6.4-7.5V45.6h9.4v39.7c0 10.6-6.1 16.2-15.8 16.2-9.8 0-16-5.8-16-16.7H42zm32.3 5.8 7.1-4.1c1.9 3.3 4.4 5.7 9.4 5.7 3.9 0 6.5-1.9 6.5-4.7 0-3.3-2.6-4.5-7-6.4l-2.5-1.1c-6.9-2.9-11.5-6.5-11.5-14.2 0-7.1 5.4-12.5 13.8-12.5 6 0 10.3 2.1 13.4 7.6l-6.8 4.4c-1.6-2.9-3.4-4-6.6-4-3 0-4.9 1.9-4.9 4.4 0 3.1 1.9 4.3 6.2 6.2l2.5 1.1c8.1 3.5 12.7 7 12.7 15 0 8.6-6.7 13.3-15.8 13.3-8.9 0-14.6-4.2-17.5-9.7z" />
+  </svg>
+);
+
+const AwsLogo = () => (
+  <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128" aria-hidden="true">
+    <text x="13" y="62" fill="#232F3E" fontSize="38" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900">AWS</text>
+    <path fill="none" stroke="#FF9900" strokeWidth="8" strokeLinecap="round" d="M28 78c22 18 49 20 75 2" />
+    <path fill="#FF9900" d="M99 75l14-1-8 12z" />
+  </svg>
+);
+
+const PostgreSqlLogo = () => (
+  <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128" aria-hidden="true">
+    <circle cx="64" cy="64" r="48" fill="#336791" />
+    <path fill="#fff" d="M50 89c-12-2-21-12-21-25 0-16 13-29 35-29s35 13 35 29c0 13-8 23-20 25l-3 11c-.8 3-4.4 4.1-6.8 2.1L64 98l-5.2 4.1c-2.4 2-6 .9-6.8-2.1L50 89z" opacity=".95" />
+    <circle cx="52" cy="58" r="5" fill="#336791" />
+    <circle cx="76" cy="58" r="5" fill="#336791" />
+    <path fill="none" stroke="#336791" strokeWidth="7" strokeLinecap="round" d="M64 66v22" />
+  </svg>
+);
+
+const MySqlLogo = () => (
+  <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128" aria-hidden="true">
+    <path fill="#00758F" d="M17 78c18-20 46-32 75-28 9 1 16 4 20 8-17-4-35-2-52 5-16 6-28 15-43 15z" />
+    <path fill="#F29111" d="M69 43c14-13 31-17 44-11-9 2-18 8-25 16 8 3 16 8 22 15-13-7-27-10-42-8 1-4 1-8 1-12z" />
+    <text x="20" y="102" fill="#1f2937" fontSize="26" fontFamily="Arial Black, Arial, sans-serif" fontWeight="900">MySQL</text>
+  </svg>
+);
+
+const ReactLogo = () => (
+  <svg className="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 128 128" aria-hidden="true">
+    <g stroke="#00D8FF" strokeWidth="6" fill="none" transform="translate(10 10)">
+      <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(30 54 54)" />
+      <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(90 54 54)" />
+      <ellipse cx="54" cy="54" rx="16" ry="46" transform="rotate(150 54 54)" />
+      <circle cx="54" cy="54" r="8" fill="#00D8FF" stroke="none" />
+    </g>
+  </svg>
 );
 
 const About = () => {
@@ -67,8 +92,8 @@ const About = () => {
               <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-800 border-2 border-transparent">
                 <img 
                   src={stackImage} 
-                  alt="Damisetti Lohitha — Full Stack Developer" 
-                  className="w-full h-full object-cover object-center"
+                  alt="Masani Sunil Kumar - Full Stack Developer" 
+                  className="w-full h-full object-cover" style={{ objectPosition: '60% center' }}
                 />
               </div>
             </div>
@@ -85,17 +110,26 @@ const About = () => {
             dangerouslySetInnerHTML={{ __html: aboutContent.bio }}
           />
 
-          {/* Horizontal Skills Row */}
-          <div className="flex items-center gap-10 mt-8">
-            <div data-aos="zoom-in" data-aos-delay="300" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl">
-              <JavaIcon />
-            </div>
-            <div data-aos="zoom-in" data-aos-delay="450" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl">
-              <SpringBootIcon />
-            </div>
-            <div data-aos="zoom-in" data-aos-delay="600" className="hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-2xl">
-              <MernIcon />
-            </div>
+          {/* Tech logo grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 md:gap-6 mt-8 max-w-2xl">
+            <TechLogoCard label="Python" delay="300">
+              <PythonLogo />
+            </TechLogoCard>
+            <TechLogoCard label="Node.js" delay="400">
+              <NodeLogo />
+            </TechLogoCard>
+            <TechLogoCard label="AWS" delay="500">
+              <AwsLogo />
+            </TechLogoCard>
+            <TechLogoCard label="PostgreSQL" delay="600">
+              <PostgreSqlLogo />
+            </TechLogoCard>
+            <TechLogoCard label="MySQL" delay="700">
+              <MySqlLogo />
+            </TechLogoCard>
+            <TechLogoCard label="React" delay="800">
+              <ReactLogo />
+            </TechLogoCard>
           </div>
 
         </div>

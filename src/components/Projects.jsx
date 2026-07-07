@@ -1,5 +1,4 @@
-import React from 'react';
-import { projects, socialLinks } from '../data/portfolioData';
+import { projects, socialLinks } from '../data/sunilPortfolioData';
 
 const GitHubIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -38,7 +37,7 @@ const ProjectCard = ({ project, aosDelay }) => (
       {/* Number + Title */}
       <div className="flex items-baseline gap-4 mb-4">
         <span className="text-5xl font-black text-white/10 font-serif italic">{project.number}</span>
-        <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
+        <div><h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>{project.duration && (<p className="text-red-300/80 text-xs md:text-sm font-bold uppercase tracking-wider mt-2">{project.duration}</p>)}</div>
       </div>
 
       {/* Description */}
@@ -71,22 +70,16 @@ const ProjectCard = ({ project, aosDelay }) => (
             <GitHubIcon />
             GitHub
           </a>
-        )}
-
-        {/* Live Demo (single) */}
-        {project.links.demo !== undefined && (
-          <a 
-            href={project.links.demo || '#'}
-            target={project.links.demo ? "_blank" : undefined}
-            rel={project.links.demo ? "noopener noreferrer" : undefined}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-              project.links.demo 
-                ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
-                : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
-            }`}
+        )}        {/* Live Demo */}
+        {project.links.demo && (
+          <a
+            href={project.links.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]"
           >
             <ExternalLinkIcon />
-            {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
+            Live Demo
           </a>
         )}
 
