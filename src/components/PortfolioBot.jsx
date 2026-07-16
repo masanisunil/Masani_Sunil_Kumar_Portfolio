@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import AiBot from '../assets/sunil/ai-bot.jpg';
 
 const fallbackWebhookUrl = 'https://sunilpersonal.app.n8n.cloud/webhook/fa749434-49b8-495c-be05-06998b2dfbdb';
 
@@ -188,9 +189,21 @@ const PortfolioBot = () => {
       {isOpen && (
         <div className="mb-4 flex h-[620px] max-h-[calc(100vh-7rem)] w-[calc(100vw-2rem)] max-w-[390px] flex-col overflow-hidden rounded-[8px] border border-white/15 bg-[#0b0b0b] text-white shadow-[0_24px_80px_rgba(0,0,0,0.55)]">
           <div className="flex items-center justify-between border-b border-white/10 bg-[#ff2a2a] px-4 py-4">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.18em]">Sunil AI</p>
-              <p className="mt-1 text-xs font-medium text-white/80">Portfolio assistant</p>
+            <div className="flex items-center gap-3">
+              <img
+                src={AiBot}
+                alt="AI"
+                className="h-10 w-10 rounded-full border border-white/30"
+              />
+
+              <div>
+                <p className="text-sm font-black uppercase">
+                  Sunil AI
+                </p>
+                <p className="text-xs text-white/80">
+                  Portfolio Assistant
+                </p>
+              </div>
             </div>
             <button
               type="button"
@@ -295,15 +308,26 @@ const PortfolioBot = () => {
         aria-label={isOpen ? 'Close portfolio assistant' : 'Open portfolio assistant'}
       >
         {isOpen ? (
-          <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
-          </svg>
-        ) : (
-          <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h8M8 14h5" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 12c0 4.2-4 7.5-9 7.5a10.7 10.7 0 0 1-3.1-.45L4 20l1.3-3.4A7 7 0 0 1 3 12c0-4.2 4-7.5 9-7.5s9 3.3 9 7.5Z" />
-          </svg>
-        )}
+  <svg
+    className="h-7 w-7"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.2"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6 6l12 12M18 6L6 18"
+    />
+  </svg>
+) : (
+  <img
+    src={AiBot}
+    alt="Sunil AI"
+    className="h-16 w-16 rounded-full object-cover"
+  />
+)}
       </button>
     </div>
   );
