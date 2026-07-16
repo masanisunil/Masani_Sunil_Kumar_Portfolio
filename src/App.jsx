@@ -9,6 +9,7 @@ import Education from './components/Education'
 import Certificates from './components/Certificates'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import PortfolioBot from './components/PortfolioBot'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Certificates />
       <Contact />
       <Footer />
+      <PortfolioBot />
     </>
   )
 }
