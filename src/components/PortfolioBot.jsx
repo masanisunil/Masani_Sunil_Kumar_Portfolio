@@ -1,13 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import AiBot from '../assets/sunil/ai-bot.jpg';
 
-const fallbackWebhookUrl = 'https://sunilpersonal.app.n8n.cloud/webhook/fa749434-49b8-495c-be05-06998b2dfbdb';
-
 const quickQuestions = [
   'What projects has Sunil built?',
   'What skills does Sunil have?',
   'Tell me about D&T Pro',
   'How can I contact Sunil?',
+  'Tell me about Sunil\'s experience',
+  'What is Sunil\'s GitHub profile?',
+  'What is Sunil\'s LinkedIn profile?',
 ];
 
 const createMessage = (role, text) => ({
@@ -47,7 +48,7 @@ const PortfolioBot = () => {
   const inputRef = useRef(null);
   const recognitionRef = useRef(null);
 
-  const webhookUrl = import.meta.env.VITE_N8N_CHAT_WEBHOOK_URL || fallbackWebhookUrl;
+  const webhookUrl = import.meta.env.VITE_N8N_CHAT_WEBHOOK_URL;
   const sessionId = useMemo(() => getSessionId(), []);
   const isVoiceSupported =
     typeof window !== 'undefined' &&

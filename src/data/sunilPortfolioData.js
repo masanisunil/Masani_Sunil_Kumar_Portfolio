@@ -16,8 +16,8 @@ export const personalInfo = {
     secondary: primaryEmail,
   },
   summary:
-    "Results-driven Full Stack Developer with 2 years of hands-on experience designing and deploying scalable web applications and cloud-based solutions. Strong in backend development, frontend engineering, REST and tRPC APIs, database optimization, AWS services, and clean full-stack architecture.",
-  resumeUrl: "/Sunil_Kumar_FullStackDeveloper_Resume.pdf",
+    "Results-driven Full Stack Developer with over 2 years of experience designing and deploying scalable web applications, cloud-native solutions, and omnichannel contact center platforms. Strong in Python, Node.js, React.js, Django, Flask, PostgreSQL, REST and tRPC APIs, AWS services, and maintainable monorepo and microservices architectures.",
+  resumeUrl: "/Masani_Sunil_Kumar_FullStackDeveloper_Resume%20(1).docx",
 };
 
 export const socialLinks = {
@@ -29,13 +29,13 @@ export const heroContent = {
   greeting: "Hi, I'm Sunil",
   titleHighlight: "Full Stack Developer",
   subtitle:
-    "I design and build scalable web applications with React, Node.js, Python, PostgreSQL, AWS, REST APIs, and tRPC.",
+    "I design and build scalable web applications and omnichannel platforms with React, Node.js, Python, PostgreSQL, AWS, REST APIs, and tRPC.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
     href: `mailto:${primaryEmail}?subject=Hiring%20Inquiry%20-%20Portfolio&body=Hello%20Sunil,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity%20with%20you.%0D%0A%0D%0ABest%20Regards,`,
   },
-  ctaResume: { text: "Download Resume", href: "/Sunil_Kumar_FullStackDeveloper_Resume.pdf" },
+  ctaResume: { text: "Download Resume", href: "/Masani_Sunil_Kumar_FullStackDeveloper_Resume%20(1).docx" },
 };
 
 export const aboutContent = {
@@ -81,6 +81,7 @@ export const technicalSkills = {
       skills: [
         { name: "Python", level: 92 },
         { name: "JavaScript (ES6+)", level: 90 },
+        { name: "HTML5 / CSS3", level: 88 },
         { name: "Node.js", level: 88 },
       ],
     },
@@ -119,6 +120,7 @@ export const technicalSkills = {
         { name: "AWS Cognito", level: 82 },
         { name: "AWS SNS / Pinpoint / SES", level: 80 },
         { name: "AWS S3 / Lambda / ECR", level: 78 },
+        { name: "Amazon Connect / Lex", level: 84 },
         { name: "Docker", level: 82 },
         { name: "Render", level: 78 },
       ],
@@ -128,10 +130,11 @@ export const technicalSkills = {
       skills: [
         { name: "Turborepo Monorepos", level: 86 },
         { name: "Microservices", level: 84 },
+        { name: "Serverless", level: 82 },
         { name: "Type-safe API Design", level: 86 },
         { name: "Git / GitHub", level: 90 },
         { name: "JIRA / Postman / VSCode", level: 88 },
-        { name: "Zod / Logto / n8n", level: 80 },
+        { name: "Zod / Logto / n8n / Okta SSO", level: 80 },
       ],
     },
   ],
@@ -139,10 +142,27 @@ export const technicalSkills = {
 
 export const experienceList = [
   {
+    organization: "TekSystems (Client: Adobe)",
+    role: "Software Engineer",
+    location: "Bengaluru, India",
+    duration: "August 2026 - Present",
+    summary:
+      "Building Yoddha, an omnichannel Service Desk agent console for Adobe with Amazon Connect, AWS Lambda, Amazon Lex, React.js, and Okta SSO.",
+    highlights: [
+      "Architected agent-facing navigation, conversation, CCP, and widget experiences integrated with Amazon Connect.",
+      "Built AWS Lambda workflows for call events, agent status transitions, contact routing, and custom desktop integration.",
+      "Leveraged Amazon Lex for intent and sub-intent capture across missed and inbound calls.",
+      "Developed Employee Information and Conversation History widgets with VIP flags, sensitivity checks, CSAT, and transcripts.",
+      "Implemented outbound dialing, transfers, hold/mute timers, missed-call handling, Smart AUX reporting, and CCP Downloader log capture.",
+      "Integrated Okta SSO authentication across UAT and Production environments.",
+    ],
+    tech: ["React.js", "Amazon Connect", "AWS Lambda", "Amazon Lex", "Okta SSO", "REST APIs", "Node.js", "DynamoDB"],
+  },
+  {
     organization: "Eligere.ai",
     role: "Junior Software Engineer",
     location: "Bengaluru, India",
-    duration: "November 2025 - Present",
+    duration: "November 2025 - August 2026",
     summary:
       "Architecting and developing a full-stack enterprise platform with Node.js, Express.js, PostgreSQL, React.js, tRPC, Prisma ORM, and Turborepo.",
     highlights: [
@@ -151,6 +171,7 @@ export const experienceList = [
       "Built multilingual AI-powered intelligent search for contextual troubleshooting workflows.",
       "Developed dashboards and file-upload systems for diagnostics, logs, and structured issue resolution.",
       "Contributed to D&T Pro, connecting dealer web portals and mechanic mobile workflows in real time.",
+      "Optimized reusable shared packages and clean architecture across the Turborepo monorepo.",
     ],
     tech: ["Node.js", "Express.js", "PostgreSQL", "React.js", "tRPC", "Prisma ORM", "Turborepo"],
   },
@@ -167,26 +188,38 @@ export const experienceList = [
       "Designed TeamXcel backend infrastructure with Python, Flask, and PostgreSQL.",
       "Built a custom Windows MDM server with APNs integration, configuration profile deployment, and device command handling.",
     ],
-    tech: ["Python", "Django", "Flask", "React.js", "PostgreSQL", "AWS", "APNs"],
+    tech: ["Python", "Django", "Flask", "React.js", "PostgreSQL", "AWS", "APIs"],
   },
 ];
 
 export const projects = [
   {
-    id: "dt-pro",
+    id: "service-desk-omnichannel",
     number: "01",
     badge: "Featured Project",
-    title: "D&T Pro - Diagnostic & Troubleshooting Platform",
-    duration: "November 2025 - Present",
+    title: "Service Desk Omnichannel - Adobe Agent Console",
+    duration: "August 2026 - Present",
     description:
-      "Built a full-stack enterprise platform connecting dealers and mechanics through a structured troubleshooting ecosystem with a web portal and mobile application. The platform includes scalable backend services, type-safe tRPC integration, responsive React.js interfaces, and multilingual AI-powered search for faster issue resolution.",
-    techTags: ["Node.js", "Express.js", "React.js", "PostgreSQL", "Prisma ORM", "Zod", "TanStack Router", "tRPC", "Logto", "Turborepo"],
+      "Built a full-stack omnichannel agent desktop on Amazon Connect for Adobe Service Desk agents handling inbound and outbound calls, transfers, routing, and structured troubleshooting. Added custom Employee Information and Conversation History widgets, Lex intent classification, Smart AUX reporting, call timers, and diagnostics tooling.",
+    techTags: ["Amazon Connect", "AWS Lambda", "Amazon Lex", "React.js", "Okta SSO", "REST APIs", "Node Js","DynamoDB"],
     links: {},
     isFlagship: true,
   },
   {
-    id: "true-read-analytics",
+    id: "dt-pro",
     number: "02",
+    badge: null,
+    title: "D&T Pro - Diagnostic & Troubleshooting Platform",
+    duration: "November 2025 - August 2026",
+    description:
+      "Built a full-stack enterprise platform connecting dealers and mechanics through a structured troubleshooting ecosystem with a web portal and mobile application. The platform includes scalable backend services, type-safe tRPC integration, responsive React.js interfaces, and multilingual AI-powered search for faster issue resolution.",
+    techTags: ["Node.js", "Express.js", "React.js", "PostgreSQL", "Prisma ORM", "Zod", "TanStack Router", "tRPC", "Logto", "Turborepo"],
+    links: {},
+    isFlagship: false,
+  },
+  {
+    id: "true-read-analytics",
+    number: "03",
     badge: null,
     title: "True Read Analytics - Bihar Electricity Board",
     duration: "May 2024 - October 2025",
@@ -198,7 +231,7 @@ export const projects = [
   },
   {
     id: "teamxcel",
-    number: "03",
+    number: "04",
     badge: null,
     title: "TeamXcel Smart Attendance Management System",
     duration: "November 2024 - April 2025",
@@ -213,14 +246,19 @@ export const projects = [
 export const certificates = {
   featured: [
     {
-      name: "Full Stack Web Development",
-      issuer: "Py Spiders Institute",
-      icon: "FS",
+      name: "Agentic AI Certified Foundations Associate",
+      issuer: "Oracle University - August 2026",
+      icon: "AI",
     },
     {
-      name: "Python for Data Science",
-      issuer: "Udemy",
-      icon: "PY",
+      name: "Claude 101",
+      issuer: "Anthropic",
+      icon: "C1",
+    },
+    {
+      name: "Claude Code in Action",
+      issuer: "Anthropic",
+      icon: "CC",
     },
   ],
   viewAllUrl: null,
@@ -230,7 +268,7 @@ export const education = {
   degree: "Bachelor of Technology - Computer Science & Engineering",
   institution: "Chadalawada Ramanamma Engineering College, Tirupati",
   cgpa: "9.4 / 10.0",
-  graduation: "Completed / In Progress",
+  graduation: "B.Tech",
   twelfth: "Intermediate (MPC) - 95%, Pragna Junior College, Allagadda",
   tenth: "SSC (Class X) - CGPA 9.3 / 10.0, B.B.R English Medium School, Allagadda",
 };
