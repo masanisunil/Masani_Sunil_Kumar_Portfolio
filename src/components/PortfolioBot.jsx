@@ -48,7 +48,12 @@ const PortfolioBot = () => {
   const inputRef = useRef(null);
   const recognitionRef = useRef(null);
 
-  const webhookUrl = import.meta.env.VITE_N8N_CHAT_WEBHOOK_URL;
+  const apiBaseUrl =
+    import.meta.env.VITE_PORTFOLIO_CHAT_API_URL ||
+    (import.meta.env.DEV ? 'http://127.0.0.1:8000' : '');
+  const chatUrl = apiBaseUrl
+    ? `${apiBaseUrl.replace(/\/+$/, '')}/portfolio-chat`
+    : import.meta.env.VITE_N8N_CHAT_WEBHOOK_URL;
   const sessionId = useMemo(() => getSessionId(), []);
   const isVoiceSupported =
     typeof window !== 'undefined' &&
@@ -85,7 +90,11 @@ const PortfolioBot = () => {
     ]);
 
     try {
-      const response = await fetch(webhookUrl, {
+      if (!chatUrl) {
+        throw new Error('Portfolio chat API URL is not configured');
+      }
+
+      const response = await fetch(chatUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
